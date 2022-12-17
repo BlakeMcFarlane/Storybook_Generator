@@ -8,12 +8,18 @@
     <link href="/templates/css/base/home.css" type="text/css" rel="stylesheet">
 
   </head>
-  <body style="background-color: rgb(189, 188, 188);">
+  <body>
+    <div class="story-nav">
+        <h1> Fantasy </h1>
+        <h1> Adventure </h1>
+        <h1> Sports </h1>
+        <h1> Spooky </h1>
+    </div>
 
-    <div class="container">
+    <div class="placements">
         <form action="#" class="form" method="post">
             {% csrf_token %}
-            <h2 class="text-center">Storybook Generator Fields</h2>
+            <h1 class="text-center">Storybook Generator </h1>
 
             <!-- Progress bar -->
             <div class="progressbar">
@@ -22,40 +28,33 @@
                 <div class="progress-step" data-title="Prompt2"></div>
                 <div class="progress-step" data-title="Prompt3"></div>
             </div>
-
+            
             <!-- Step 1 -->
-            <div class="form-step form-step-active">
+            <div class="form-step form-step-active btn-next">
                 <div class="input-group">
-                <label for="bestfriendsname">bestfriendsname</label>
-                <input type="text" name="bestfriendsname" id="bestfriendsname" />
-                </div>
-                <div class="">
-                <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                <label for="bestfriendsname"> {{name}} </label>
+                <input type="text" name="name"  class="input-text" autofocus />
                 </div>
             </div>
 
             <!-- Step 2 -->
-            <div class="form-step">
+            <div class="form-step btn-next">
                 <div class="input-group">
-                <label for="superpower">superpower</label>
-                <input type="text" name="superpower" id="superpower" />
-                </div>
-                <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <a href="#" class="btn btn-next">Next</a>
+                <label for="superpower">{{power}}</label>
+                <input type="text" name="power" id="lotus" style="border-radius:1rem" />
                 </div>
             </div>
 
             <!-- Step 3 -->
             <div class="form-step">
                 <div class="input-group">
-                <label for="location">location</label>
-                <input type="text" name="location" id="location" />
+                <label for="location">{{location}}</label>
+                <input type="text" name="location" id="lotus"  />
                 </div>
-                <div class="btns-group">
-                <a href="#" class="btn btn-prev">Previous</a>
-                <input type="submit" value="Submit" class="btn" />
+                <div> 
+                    <input type ="submit" value="Generate" class="hidden-enter">
                 </div>
+               
             </div>
         </form>
     </div>

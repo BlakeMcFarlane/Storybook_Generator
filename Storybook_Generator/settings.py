@@ -25,7 +25,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'base.apps.BaseConfig',
 ]
 
@@ -113,7 +112,7 @@ STATICFILES_DIRS = [
 
 STATIC_URL = 'static/'
 
-
+OPENAI_API_KEY = "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"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
